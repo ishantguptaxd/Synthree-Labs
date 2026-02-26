@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGOAAS LAB | Aesthetic Digital Studio</title>
+    <title>IGOOAS LABS | Aesthetic Digital Studio</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -17,7 +17,7 @@
             --glass: rgba(21, 36, 28, 0.8);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         
         body {
             background: linear-gradient(135deg, var(--bg-light), var(--bg-deep));
@@ -99,6 +99,10 @@
         .btn:hover { background: var(--accent); color: var(--bg-deep); }
         .btn-solid { background: var(--accent); color: var(--bg-deep); }
 
+        .contact-info { margin-top: 30px; }
+        .contact-link { display: block; color: #fff; text-decoration: none; font-size: 1.2rem; margin: 10px 0; font-weight: 300; transition: 0.3s; }
+        .contact-link:hover { color: var(--accent); }
+
         @media (max-width: 768px) {
             .impact-strip { gap: 30px; flex-direction: column; }
             .section-title { font-size: 2.2rem; }
@@ -110,8 +114,8 @@
 
     <nav>
         <div class="nav-container">
-            <div class="logo">IGOAAS LAB<span>.</span></div>
-            <a href="https://wa.me/918601872764" class="btn btn-solid" style="padding: 10px 20px;">START PROJECT</a>
+            <div class="logo">IGOOAS LABS<span>.</span></div>
+            <a href="#contact" class="btn btn-solid" style="padding: 10px 20px;">START PROJECT</a>
         </div>
     </nav>
 
@@ -181,18 +185,22 @@
         </div>
     </section>
 
-    <footer style="padding: 100px 5% 50px; text-align: center; border-top: 1px solid rgba(142, 191, 165, 0.1);">
+    <footer id="contact" style="padding: 100px 5% 50px; text-align: center; border-top: 1px solid rgba(142, 191, 165, 0.1);">
         <h2 class="section-title" style="margin-bottom: 20px;">Ready to elevate your brand?</h2>
-        <p style="margin-bottom: 40px; color: var(--text-dim);">Let's discuss how we can transform your digital presence.</p>
-        <a href="https://wa.me/918601872764" class="btn btn-solid"><i class="fab fa-whatsapp"></i> MESSAGE US NOW</a>
+        <p style="margin-bottom: 20px; color: var(--text-dim);">Let's discuss how we can transform your digital presence.</p>
+        
+        <div class="contact-info">
+            <a href="tel:+910000000000" class="contact-link"><i class="fas fa-phone"></i> +91 00000 00000</a>
+            <a href="mailto:hello@igooaslabs.com" class="contact-link"><i class="fas fa-envelope"></i> hello@igooaslabs.com</a>
+        </div>
+
         <div style="margin-top: 80px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-            <div class="logo" style="font-size: 1rem;">IGOAAS LAB<span>.</span></div>
-            <p style="font-size: 12px; color: var(--text-dim);">© 2026 IGOAAS LAB • Tech Collective.</p>
+            <div class="logo" style="font-size: 1rem;">IGOOAS LABS<span>.</span></div>
+            <p style="font-size: 12px; color: var(--text-dim);">© 2026 IGOOAS LABS • Tech Collective.</p>
         </div>
     </footer>
 
     <script>
-        // Safety check to ensure DOM is ready
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -202,7 +210,6 @@
                 });
             }, { threshold: 0.1 });
 
-            // Observe sections and the impact strip
             document.querySelectorAll('section, .impact-strip').forEach((el) => {
                 observer.observe(el);
             });
